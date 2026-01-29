@@ -389,7 +389,7 @@ ul {
     flex-direction: column;
     width: 100%;
     max-width: 72.5rem;
-    min-height: 37.5rem;
+    min-height: clamp(27rem, 30vh, 37rem);
     padding: 1.5625rem;
     padding-bottom: 0;
     margin-top: 35.625rem;
@@ -398,10 +398,12 @@ ul {
     border-radius: .625rem .625rem 0 0;
     border: .0625rem solid #8088ED;
     background: #2a348961;
-    ;
     backdrop-filter: blur(3px);
     border-bottom: none;
     z-index: 3;
+    animation: appear ease;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 /* Carousel Content */
@@ -845,7 +847,6 @@ ul {
     }
 
     .buttons-container {
-        flex-direction: column;
         gap: 1rem;
     }
 
@@ -887,13 +888,105 @@ ul {
 
 /* Tablet */
 @media (max-width: 768px) {
-    .app-header-wrapper {
+
+    .app-header-wrapper,
+    .app-header-wrapper.active {
         margin: 0 .75rem;
     }
 
     .app-navigation-bar {
         display: flex;
         justify-content: space-between;
-        padding: .75rem 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .navigation-links {
+        display: none;
+    }
+
+    .sign-in-container {
+        gap: 0.5rem;
+    }
+
+    .sign-in-container a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-contents {
+        margin-top: 8rem;
+    }
+
+    .fade-hero-contents {
+        padding: 0 2rem;
+    }
+
+    .main-text-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .description-container span {
+        font-size: 0.9rem;
+    }
+
+    .carousel-container {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .main-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .feature-head {
+        text-align: center;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .section-sub-title {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    .section-description {
+        font-size: 0.8rem;
+    }
+
+    .box {
+        max-width: none;
+        padding: 1rem;
+    }
+
+    .help-section {
+        margin-top: 3rem;
+    }
+
+    .help-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .left-content {
+        text-align: left;
+    }
+
+    .right-content {
+        padding: 1rem;
+    }
+
+    .app-footer {
+        padding: 1rem 1.5rem;
+    }
+
+    .web-title span {
+        font-size: 1.2rem;
+    }
+
+    .bottom-footer a {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }
