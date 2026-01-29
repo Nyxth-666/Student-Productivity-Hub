@@ -807,6 +807,23 @@ ul {
     .title-container .logo-description {
         display: none;
     }
+
+    .main-section {
+        padding: 6rem 5rem;
+    }
+
+    .app-footer {
+        padding: 1rem 5rem;
+    }
+
+    .feature-boxes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+
+    .help-wrapper {
+        gap: 2rem;
+    }
 }
 
 /* Laptop */
