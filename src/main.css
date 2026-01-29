@@ -615,8 +615,8 @@ ul {
     gap: .425rem;
 }
 
-.section-description li {
-    list-style-type: disc;
+.section-description li::before {
+    content: '•';
 }
 
 .right-content {
