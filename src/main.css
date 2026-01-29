@@ -49,7 +49,7 @@ ul {
     margin: 0 1.25rem;
     align-items: center;
     justify-content: center;
-}   
+}
 
 /* Navigation */
 .app-navigation-bar {
@@ -119,7 +119,7 @@ ul {
     font-size: 1.0625rem;
     font-weight: 400;
     transition: background 0.3s ease,
-                opacity 0.3s ease;
+        opacity 0.3s ease;
 }
 
 /* Sign In Buttons Container */
@@ -136,7 +136,7 @@ ul {
     font-weight: 400;
     background: none;
     transition: background 0.3s ease,
-                opacity 0.3s ease;
+        opacity 0.3s ease;
 }
 
 .login {
@@ -242,7 +242,7 @@ ul {
     display: flex;
     flex-direction: column;
     transition: transform 0.4s ease,
-                opacity 0.4s ease;
+        opacity 0.4s ease;
     will-change: transform, opacity;
     align-items: center;
     gap: 2rem;
@@ -279,9 +279,17 @@ ul {
 }
 
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Hero Content Description */
@@ -324,9 +332,17 @@ ul {
 }
 
 @keyframes gradientButtonMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .learn-more {
@@ -381,7 +397,8 @@ ul {
     justify-content: center;
     border-radius: .625rem .625rem 0 0;
     border: .0625rem solid #8088ED;
-    background: #2a348961;;
+    background: #2a348961;
+    ;
     backdrop-filter: blur(3px);
     border-bottom: none;
     z-index: 3;
@@ -456,6 +473,9 @@ ul {
 .feature-head {
     display: flex;
     flex-direction: column;
+    animation: slideLeft linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 .section-title {
@@ -497,10 +517,13 @@ ul {
     border-radius: 1.125rem;
     background: linear-gradient(133deg, #191F4A 8.81%, #192146 23.9%, #0F172B 109.29%);
     border: solid .0625rem #42457c;
-    transition: 
+    transition:
         transform 0.3s ease,
         border-color 0.2s ease,
         box-shadow 0.3s ease;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 .icon-box {
@@ -514,7 +537,7 @@ ul {
     padding: .5rem;
     border-radius: 1.0625rem;
     border: solid .0625rem #42457c;
-    transition: 
+    transition:
         transform 0.3s ease,
         border-color 0.2s ease,
         box-shadow 0.3s ease;
@@ -577,6 +600,9 @@ ul {
     display: flex;
     flex-direction: column;
     height: auto;
+    animation: slideLeft linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 .help-list {
@@ -594,7 +620,7 @@ ul {
 }
 
 .right-content {
-    display: flex   ;
+    display: flex;
     flex-direction: column;
     width: 100%;
     padding: 1.85rem;
@@ -603,6 +629,9 @@ ul {
     background: linear-gradient(133deg, #161b3f 8.81%, #192146 23.9%, #0F172B 109.29%);
     border: solid .0625rem #42457c;
     box-shadow: 0 1.25rem 1.875rem rgba(38, 0, 255, 0.25);
+    animation: slideRight linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
 }
 
 .right-content .box-title {
@@ -727,6 +756,46 @@ ul {
 
 .bottom-footer a:hover {
     transform: translateY(-3px);
+}
+
+/* ================================
+    Scroll Animation Section
+================================ */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0.5;
+        transform: translateX(-6.25rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0.5;
+        transform: translateX(6.25rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
 }
 
 /* ================================
