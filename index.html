@@ -1,377 +1,455 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Productivity Hub</title>
 
     <!-- Meta Config -->
-    <meta name="description" content="A personal student hub planner with a dashboard, tasks management, pomodoro, weekly planner, etc.">
-    <meta name="author" content="Joshie-Borrow, Worms8462">
+    <meta
+      name="description"
+      content="A personal student hub planner with a dashboard, tasks management, pomodoro, weekly planner, etc."
+    />
+    <meta name="author" content="Joshie-Borrow, Worms8462" />
 
-    <link rel="icon" href="./public/logo.png">
+    <link rel="icon" href="./public/logo.png" />
 
     <!-- SEO -->
-    <meta property="og:title" content="Student-Productivity-Hub">
-    <meta property="og:description" content="A clean productivity hub made for students to plan their day">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/public/logo.png">
+    <meta property="og:title" content="Student-Productivity-Hub" />
+    <meta
+      property="og:description"
+      content="A clean productivity hub made for students to plan their day"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/public/logo.png" />
     <!-- <meta property="og:url" content="https://yourdomain.com"> -->
 
     <!-- Style For Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=analytics,bedtime,calendar_month,done_all,network_intelligence,timer" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=analytics,bedtime,calendar_month,done_all,network_intelligence,timer"
+    />
 
-    <link rel="stylesheet" href="src/main.css">
-    <link rel="stylesheet" href="src/styles/root.css">
+    <link rel="stylesheet" href="src/main.css" />
+    <link rel="stylesheet" href="src/styles/root.css" />
     <script src="" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- App Main Header -->
     <header class="app-header">
-        <!-- App Header Wrapper -->
-        <div class="app-header-wrapper">
-            <!-- App Navigation Bar -->
-            <nav class="app-navigation-bar">
+      <!-- App Header Wrapper -->
+      <div class="app-header-wrapper">
+        <!-- App Navigation Bar -->
+        <nav class="app-navigation-bar">
+          <!-- Logo Container -->
+          <div class="logo-container">
+            <!-- Logo Image -->
+            <div class="img-container">
+              <img src="assets/logo.png" />
+            </div>
+            <!-- Title -->
+            <div class="title-container">
+              <span class="logo-title">Student Productivity Hub</span>
+              <span class="logo-description"
+                >Turn scattered tasks into a focused study system.</span
+              >
+            </div>
+          </div>
 
-                <!-- Logo Container -->
-                <div class="logo-container">
-                    <!-- Logo Image -->
-                    <div class="img-container">
-                        <img src="assets/logo.png">
-                    </div>
-                    <!-- Title -->
-                    <div class="title-container">
-                        <span class="logo-title">Student Productivity Hub</span>
-                        <span class="logo-description">Turn scattered tasks into a focused study system.</span>
-                    </div>
-                </div>
+          <!-- Navigational Link Container -->
+          <div class="navigation-links">
+            <!-- Lists -->
+            <ul>
+              <li class="links">
+                <a href="#heroSection">Home</a>
+              </li>
+              <li class="links">
+                <a href="#featureSection">Features</a>
+              </li>
+              <li class="links">
+                <a href="#helpSection">How It Helps</a>
+              </li>
+            </ul>
+          </div>
 
-                <!-- Navigational Link Container -->
-                <div class="navigation-links">
-                    <!-- Lists -->
-                    <ul>
-                        <li class="links">
-                            <a href="#heroSection">Home</a>
-                        </li>
-                        <li class="links">
-                            <a href="#featureSection">Features</a>
-                        </li>
-                        <li class="links">
-                            <a href="#helpSection">How It Helps</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- User Sign In Container -->
-                <div class="sign-in-container">
-                    <!-- Buttons -->
-                    <a class="login" href="src/pages/login-auth.html">Login</a>
-                    <a class="signup"  href="src/pages/register-auth.html">Sign Up</a>
-                </div>
-
-            </nav>
-        </div>
+          <!-- User Sign In Container -->
+          <div class="sign-in-container">
+            <!-- Buttons -->
+            <a class="login" href="src/pages/login-auth.html">Login</a>
+            <a class="signup" href="src/pages/register-auth.html">Sign Up</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <!-- App Main Layout -->
     <main class="app-layout">
-
-        <!-- Hero Section -->
-        <section class="hero-section" id="heroSection">
-            <!-- Hero Contents -->
-            <div class="hero-contents">
-
-                <!-- Fade Group -->
-                <div class="fade-hero-contents">
-                    <!-- Main Text Container -->
-                    <div class="main-text-container">
-                        <h1>Stay ahead of your</h1>
-                        <h1 class="highlighted">classes, projects, and exams.</h1>
-                    </div>
-
-                    <!-- Description Text Container-->
-                    <div class="description-container">
-                        <span>Student Productivity Hub keeps your to-dos, assignments, and weekly schedule in one clean dashboard  —  so you can stop juggling apps and start studying with clarity.</span>
-                    </div>
-
-                    <!-- Buttons Container -->
-                    <div class="buttons-container">
-                        <a class="get-started" href="src/pages/register-auth.html">Get Started for Free</a>
-                        <a class="learn-more" href="#featureSection">Learn More</a>
-                    </div>
-
-                    <div class="info-container">
-                        <span>Designed for college & IT students</span>
-                        <div class="dot"></div>
-                        <span>Tracks focus hours, not screen time</span>
-                        <div class="dot"></div>
-                        <span>See tasks and schedule in one view</span>
-                    </div>
-                </div>
-
-                <!-- Hero Carousel Container -->
-                <div class="carousel-container">
-                    <!-- Carousel Content -->
-                    <div class="carousel-contents">
-                        <ul class="carousel-list">
-                            <li class="items">
-                                <img width="69.375rem" height="42.5rem" src="assets/pages/light.png">
-                            </li>
-                            <li class="items">
-                                <img width="69.375rem" height="42.5rem" src="assets/pages/dark.png">
-                            </li>
-                            <li class="items">
-                                <img width="69.375rem" height="42.5rem" src="assets/pages/login.png">
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- Hero Section -->
+      <section class="hero-section" id="heroSection">
+        <!-- Hero Contents -->
+        <div class="hero-contents">
+          <!-- Fade Group -->
+          <div class="fade-hero-contents">
+            <!-- Main Text Container -->
+            <div class="main-text-container">
+              <h1>Stay ahead of your</h1>
+              <h1 class="highlighted">classes, projects, and exams.</h1>
             </div>
+
+            <!-- Description Text Container-->
+            <div class="description-container">
+              <span
+                >Student Productivity Hub keeps your to-dos, assignments, and
+                weekly schedule in one clean dashboard — so you can stop
+                juggling apps and start studying with clarity.</span
+              >
+            </div>
+
+            <!-- Buttons Container -->
+            <div class="buttons-container">
+              <a class="get-started" href="src/pages/register-auth.html"
+                >Get Started for Free</a
+              >
+              <a class="learn-more" href="#featureSection">Learn More</a>
+            </div>
+
+            <div class="info-container">
+              <span>Designed for college & IT students</span>
+              <div class="dot"></div>
+              <span>Tracks focus hours, not screen time</span>
+              <div class="dot"></div>
+              <span>See tasks and schedule in one view</span>
+            </div>
+          </div>
+
+          <!-- Hero Carousel Container -->
+          <div class="carousel-container">
+            <!-- Carousel Content -->
+            <div class="carousel-contents">
+              <ul class="carousel-list">
+                <li class="items">
+                  <img
+                    width="69.375rem"
+                    height="42.5rem"
+                    src="assets/pages/light.png"
+                  />
+                </li>
+                <li class="items">
+                  <img
+                    width="69.375rem"
+                    height="42.5rem"
+                    src="assets/pages/dark.png"
+                  />
+                </li>
+                <li class="items">
+                  <img
+                    width="69.375rem"
+                    height="42.5rem"
+                    src="assets/pages/login.png"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-section">
+        <!-- Feature Section -->
+        <section class="feature-section" id="featureSection">
+          <!-- Feature Content -->
+          <div class="feature-content">
+            <!-- Feature Head -->
+            <div class="feature-head">
+              <span class="section-title">FEATURES</span>
+              <h1 class="section-sub-title">
+                Everything you need to stay on top of student life.
+              </h1>
+              <p>
+                Task managers and calendars are great — but Student Productivity
+                Hub is build specially for how students study, submit, and
+                switch between subjects all day.
+              </p>
+            </div>
+
+            <!-- Feature Boxes -->
+            <div class="feature-boxes">
+              <!-- Tasks -->
+              <div class="box">
+                <div class="icon-box">
+                  <span class="material-symbols-outlined">done_all</span>
+                </div>
+
+                <div class="box-title">
+                  <span>Smart task board for classes and projects</span>
+                </div>
+
+                <div class="box-description">
+                  Capture everything from quick readings to semester-long
+                  projects. Group tasks by course, due date or priority so you
+                  always know what deserves your energy first.
+                </div>
+
+                <div class="box-tags">
+                  <span>Course tags</span>
+                  <span>Due-Date focus</span>
+                  <span>Priority tags</span>
+                </div>
+              </div>
+
+              <!-- Timer -->
+              <div class="box">
+                <div class="icon-box">
+                  <span class="material-symbols-outlined">timer</span>
+                </div>
+
+                <div class="box-title">
+                  <span>Built-in focus timer, not just a clock</span>
+                </div>
+
+                <div class="box-description">
+                  Run Pomodoro-style sessions with clear goals. then log how
+                  many deep-work blocks you complete per subject. Stop working
+                  "until you're tired and start working in intentional sprints.
+                </div>
+
+                <div class="box-tags">
+                  <span>Pomodoro clocks</span>
+                  <span>Session history</span>
+                  <span>Gentle reminders</span>
+                </div>
+              </div>
+
+              <!-- Weekly Scedule -->
+              <div class="box">
+                <div class="icon-box">
+                  <span class="material-symbols-outlined">calendar_month</span>
+                </div>
+
+                <div class="box-title">
+                  <span>Weekly schedule, made for real life</span>
+                </div>
+
+                <div class="box-description">
+                  View lectures, labs, deadlines, and personal time in a single
+                  weekly layout. Block time for deep work and see where you're
+                  over-committed before the week even starts.
+                </div>
+
+                <div class="box-tags">
+                  <span>Time blocking</span>
+                  <span>Deadlines in context</span>
+                  <span>Morning & night views</span>
+                </div>
+              </div>
+
+              <!-- Insights -->
+              <div class="box">
+                <div class="icon-box">
+                  <span class="material-symbols-outlined">analytics</span>
+                </div>
+
+                <div class="box-title">
+                  <span>Lightweight productivity insights</span>
+                </div>
+
+                <div class="box-description">
+                  See a simple breakdown of where your focus goes: by course, by
+                  weekday, and by type of work (reading, coding, writing). No
+                  corporate dashboards, just student-friendly clarity.
+                </div>
+
+                <div class="box-tags">
+                  <span>Study trends</span>
+                  <span>Course load view</span>
+                  <span>Gentle nudges</span>
+                </div>
+              </div>
+
+              <!-- Quick Notes -->
+              <div class="box">
+                <div class="icon-box">
+                  <span class="material-symbols-outlined"
+                    >network_intelligence</span
+                  >
+                </div>
+
+                <div class="box-title">
+                  <span>Quick notes where you actually study</span>
+                </div>
+
+                <div class="box-description">
+                  Drop ideas, formulas, code snippets, or exam reminders right
+                  beside your tasks. Keep everything related to "that one exam"
+                  in one calm place instead of five different apps.
+                </div>
+
+                <div class="box-tags">
+                  <span>Inline scratchpads</span>
+                  <span>Subject notebooks</span>
+                  <span>Tiny reminders</span>
+                </div>
+              </div>
+
+              <!-- Soft UI -->
+              <div class="box">
+                <div class="icon-box">
+                  <span class="material-symbols-outlined">bedtime</span>
+                </div>
+
+                <div class="box-title">
+                  <span>Soft UI for late-night and early-morning sessions</span>
+                </div>
+
+                <div class="box-description">
+                  A calm dark interface with subtle gradients, soft shadows, and
+                  just enough color to keep you awake without overwhelming you.
+                  Designed for long study sprints.
+                </div>
+
+                <div class="box-tags">
+                  <span>Dark-first design</span>
+                  <span>Low-glare palette</span>
+                  <span>Accessible contrast</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <section class="main-section">
-            <!-- Feature Section -->
-            <section class="feature-section" id="featureSection">
+        <!-- How It Helps Section -->
+        <div class="help-section" id="helpSection">
+          <!-- Help Content -->
+          <div class="help-wrapper">
+            <!-- Left Content -->
+            <div class="left-content">
+              <!-- Help Header -->
+              <span class="section-title">HOW IT HELPS</span>
+              <h1 class="section-sub-title">
+                Designed around the way students actually work.
+              </h1>
 
-                <!-- Feature Content -->
-                <div class="feature-content">
+              <p class="section-description">
+                Student life is a mix of lectures, project groups, late-night
+                cram sessions, and everything in between. Student Productivity
+                Hub doesn't try to "gamify" you - it just keeps all the moving
+                parts in one place, with quiet structure instead of constant
+                noise.
+              </p>
 
-                    <!-- Feature Head -->
-                    <div class="feature-head">
-                        <span class="section-title">FEATURES</span>
-                        <h1 class="section-sub-title">Everything you need to stay on top of student life.</h1>
-                        <p>Task managers and calendars are great — but Student Productivity Hub is build specially for how students
-                            study, submit, and switch between subjects all day.
-                        </p>
-                    </div>
-
-                    <!-- Feature Boxes -->
-                    <div class="feature-boxes">
-
-                        <!-- Tasks -->
-                        <div class="box">
-                            <div class="icon-box">
-                                <span class="material-symbols-outlined">done_all</span>
-                            </div>
-
-                            <div class="box-title">
-                                <span>Smart task board for classes and projects</span>
-                            </div>
-
-                            <div class="box-description">
-                                Capture everything from quick readings to semester-long projects. Group tasks by course, due date 
-                                or priority so you always know what deserves your energy first.
-                            </div>
-
-                            <div class="box-tags">
-                                <span>Course tags</span>
-                                <span>Due-Date focus</span>
-                                <span>Priority tags</span>
-                            </div>
-                        </div>
-
-                        <!-- Timer -->
-                        <div class="box">
-                            <div class="icon-box">
-                                <span class="material-symbols-outlined">timer</span>
-                            </div>
-
-                            <div class="box-title">
-                                <span>Built-in focus timer, not just a clock</span>
-                            </div>
-
-                            <div class="box-description">
-                                Run Pomodoro-style sessions with clear goals. then log how many deep-work blocks you complete per 
-                                subject. Stop working "until you're tired and start working in intentional sprints.
-                            </div>
-
-                            <div class="box-tags">
-                                <span>Pomodoro clocks</span>
-                                <span>Session history</span>
-                                <span>Gentle reminders</span>
-                            </div>
-                        </div>
-
-                        <!-- Weekly Scedule -->
-                        <div class="box">
-                            <div class="icon-box">
-                                <span class="material-symbols-outlined">calendar_month</span>
-                            </div>
-
-                            <div class="box-title">
-                                <span>Weekly schedule, made for real life</span>
-                            </div>
-
-                            <div class="box-description">
-                                View lectures, labs, deadlines, and personal time in a single weekly layout. Block time for deep 
-                                work and see where you're over-committed before the week even starts.
-                            </div>
-
-                            <div class="box-tags">
-                                <span>Time blocking</span>
-                                <span>Deadlines in context</span>
-                                <span>Morning & night views</span>
-                            </div>
-                        </div>
-
-                        <!-- Insights -->
-                        <div class="box">
-                            <div class="icon-box">
-                                <span class="material-symbols-outlined">analytics</span>
-                            </div>
-
-                            <div class="box-title">
-                                <span>Lightweight productivity insights</span>
-                            </div>
-
-                            <div class="box-description">
-                                See a simple breakdown of where your focus goes: by course, by weekday, and by type of work 
-                                (reading, coding, writing). No corporate dashboards, just student-friendly clarity.
-                            </div>
-
-                            <div class="box-tags">
-                                <span>Study trends</span>
-                                <span>Course load view</span>
-                                <span>Gentle nudges</span>
-                            </div>
-                        </div>
-
-                        <!-- Quick Notes -->
-                        <div class="box">
-                            <div class="icon-box">
-                                <span class="material-symbols-outlined">network_intelligence</span>
-                            </div>
-
-                            <div class="box-title">
-                                <span>Quick notes where you actually study</span>
-                            </div>
-
-                            <div class="box-description">
-                                Drop ideas, formulas, code snippets, or exam reminders right beside your tasks. Keep everything 
-                                related to "that one exam" in one calm place instead of five different apps.
-                            </div>
-
-                            <div class="box-tags">
-                                <span>Inline scratchpads</span>
-                                <span>Subject notebooks</span>
-                                <span>Tiny reminders</span>
-                            </div>
-                        </div>
-
-                        <!-- Soft UI -->
-                        <div class="box">
-                            <div class="icon-box">
-                                <span class="material-symbols-outlined">bedtime</span>
-                            </div>
-
-                            <div class="box-title">
-                                <span>Soft UI for late-night and early-morning sessions</span>
-                            </div>
-
-                            <div class="box-description">
-                                A calm dark interface with subtle gradients, soft shadows, and just enough color to keep you awake 
-                                without overwhelming you. Designed for long study sprints.
-                            </div>
-
-                            <div class="box-tags">
-                                <span>Dark-first design</span>
-                                <span>Low-glare palette</span>
-                                <span>Accessible contrast</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- How It Helps Section -->
-            <div class="help-section" id="helpSection">
-                <!-- Help Content -->
-                <div class="help-wrapper">
-                    <!-- Left Content -->
-                    <div class="left-content">
-                        <!-- Help Header -->
-                        <span class="section-title">HOW IT HELPS</span>
-                        <h1 class="section-sub-title">Designed around the way students actually work.</h1>
-
-                        <p class="section-description">Student life is a mix of lectures, project groups, late-night cram sessions, and everything in between. 
-                            Student Productivity Hub doesn't try to "gamify" you - it just keeps all the moving parts in one place, 
-                            with quiet structure instead of constant noise.</p>
-
-                        <!-- Help List -->
-                        <div class="help-list">
-                            <ul class="section-description">
-                                <li>Replace ten messy tabs with one clear overview of your week.</li>
-                                <li>Turn deadlines into small, scheduled blocks instead of last-minute panic.</li>
-                                <li>See how much focused time you're giving each subject, not just how long you sit at your desk.</li>
-                                <li>Build a repeatable rhythm that works whether you're on-campus, remote, or somewhere in between.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="right-content">
-                        
-                        <!-- Task 1 -->
-                        <div class="box-section">
-                            <span class="box-title">9:00 AM • Plan your day in 3 minutes</span>
-                            <span class="box-description">Open the dashboard, drag tasks into "Today", and block a single focus window for your hardest class.</span>
-                            <span class="box-extra-info">Keep the plan small enough that it still feels doable.</span>
-                        </div>
-                        
-                        <!-- Task 2 -->
-                        <div class="box-section">
-                            <span class="box-title">2:00 PM • Run a deep-work sprint</span>
-                            <span class="box-description">Start a 25-minute focus block for your lab report. No social feeds, no extra tabs — just the task and a timer.</span>
-                            <span class="box-extra-info">See your focus streak grow as you repeat this for each class.</span>
-                        </div>
-                        
-                        <!-- Task 3 -->
-                        <div class="box-section">
-                            <span class="box-title">10:30 AM • Close the loop calmly</span>
-                            <span class="box-description">Review what you completed, reschedule what can wait, and jot down tomorrow's first task so you don't carry it in your head.</span>
-                            <span class="box-extra-info">End the day with clear picture, not a wall of red notifications.</span>
-                        </div>
-                    </div>
-                </div>
+              <!-- Help List -->
+              <div class="help-list">
+                <ul class="section-description">
+                  <li>
+                    Replace ten messy tabs with one clear overview of your week.
+                  </li>
+                  <li>
+                    Turn deadlines into small, scheduled blocks instead of
+                    last-minute panic.
+                  </li>
+                  <li>
+                    See how much focused time you're giving each subject, not
+                    just how long you sit at your desk.
+                  </li>
+                  <li>
+                    Build a repeatable rhythm that works whether you're
+                    on-campus, remote, or somewhere in between.
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
+
+            <div class="right-content">
+              <!-- Task 1 -->
+              <div class="box-section">
+                <span class="box-title"
+                  >9:00 AM • Plan your day in 3 minutes</span
+                >
+                <span class="box-description"
+                  >Open the dashboard, drag tasks into "Today", and block a
+                  single focus window for your hardest class.</span
+                >
+                <span class="box-extra-info"
+                  >Keep the plan small enough that it still feels doable.</span
+                >
+              </div>
+
+              <!-- Task 2 -->
+              <div class="box-section">
+                <span class="box-title">2:00 PM • Run a deep-work sprint</span>
+                <span class="box-description"
+                  >Start a 25-minute focus block for your lab report. No social
+                  feeds, no extra tabs — just the task and a timer.</span
+                >
+                <span class="box-extra-info"
+                  >See your focus streak grow as you repeat this for each
+                  class.</span
+                >
+              </div>
+
+              <!-- Task 3 -->
+              <div class="box-section">
+                <span class="box-title">10:30 AM • Close the loop calmly</span>
+                <span class="box-description"
+                  >Review what you completed, reschedule what can wait, and jot
+                  down tomorrow's first task so you don't carry it in your
+                  head.</span
+                >
+                <span class="box-extra-info"
+                  >End the day with clear picture, not a wall of red
+                  notifications.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- App-Footer -->
     <footer class="app-footer">
-        <div class="top-footer">
-            <div class="web-title">
-                <div class="image-wrapper">
-                    <img src="public/logo.png">
-                </div>
-                <span>Student Productivity Hub</span>
+      <div class="top-footer">
+        <div class="web-title">
+          <div class="image-wrapper">
+            <img src="public/logo.png" />
+          </div>
+          <span>Student Productivity Hub</span>
+        </div>
+        <div class="web-links">
+          <div class="link-footer">
+            <span class="link-title">Pages</span>
+            <div class="links-column">
+              <a href="#heroSection">Home</a>
+              <a href="#featureSection">Feature</a>
+              <a href="#helpSection">Help</a>
             </div>
-            <div class="web-links">
-                <div class="link-footer">
-                    <span class="link-title">Pages</span>
-                    <div class="links-column">
-                        <a href="#heroSection">Home</a>
-                        <a href="#featureSection">Feature</a>
-                        <a href="#helpSection">Help</a>
-                    </div>
-                </div>
+          </div>
 
-                <div class="link-footer">
-                    <span class="link-title">Creator's</span>
-                    <div class="links-column">
-                        <a href="https://github.com/Nyxth-666" target="_blank">Joshie-Borrow (Nyxth-666)</a>
-                        <a href="https://github.com/gb8462" target="_blank">Worms8462 (gboy8462)</a>
-                    </div>
-                </div>
+          <div class="link-footer">
+            <span class="link-title">Creator's</span>
+            <div class="links-column">
+              <a href="https://github.com/Nyxth-666" target="_blank"
+                >Joshie-Borrow (Nyxth-666)</a
+              >
+              <a href="https://github.com/gb8462" target="_blank"
+                >Worms8462 (gboy8462)</a
+              >
             </div>
+          </div>
         </div>
-        <hr>
-        <div class="bottom-footer">
-            <span>© 2026 Student Productivity Hub. Built for students who want calm progress, not chaos.</span>
-            <a href="https://github.com/Nyxth-666/Student-Productivity-Hub"><img src="assets/github-icon/github-mark-white.png"></a>
-        </div>
+      </div>
+      <hr />
+      <div class="bottom-footer">
+        <span
+          >© 2026 Student Productivity Hub. Built for students who want calm
+          progress, not chaos.</span
+        >
+        <a href="https://github.com/Nyxth-666/Student-Productivity-Hub"
+          ><img src="assets/github-icon/github-mark-white.png"
+        /></a>
+      </div>
     </footer>
 
     <script src="src/main.js"></script>
-</body>
+  </body>
 </html>
