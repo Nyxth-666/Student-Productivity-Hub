@@ -805,7 +805,7 @@ ul {
 ================================ */
 
 /* Large Laptop */
-@media (max-width: 1220px) {
+@media (max-width: 1440px) {
     .title-container .logo-description {
         display: none;
     }
@@ -818,13 +818,18 @@ ul {
         padding: 1rem 5rem;
     }
 
+    .section-description {
+        width: auto;
+    }
+
     .feature-boxes {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.25rem;
     }
 
     .help-wrapper {
-        gap: 2rem;
+        flex-direction: column;
+        gap: 1rem;
     }
 }
 
@@ -832,10 +837,6 @@ ul {
 @media (max-width: 1024px) {
     .navigation-links ul {
         gap: 2rem;
-    }
-
-    .fade-hero-contents {
-        gap: 1rem;
     }
 
     .main-text-container h1 {
@@ -851,6 +852,7 @@ ul {
     }
 
     .info-container {
+        align-items: flex-start;
         gap: 0.5rem;
     }
 
@@ -869,7 +871,6 @@ ul {
     }
 
     .help-wrapper {
-        flex-direction: column;
         gap: 2rem;
     }
 
@@ -888,10 +889,8 @@ ul {
 
 /* Tablet */
 @media (max-width: 768px) {
-
-    .app-header-wrapper,
-    .app-header-wrapper.active {
-        margin: 0 .75rem;
+    .app-header-wrapper {
+        margin: 0 0.75rem;
     }
 
     .app-navigation-bar {
@@ -917,10 +916,6 @@ ul {
         margin-top: 8rem;
     }
 
-    .fade-hero-contents {
-        padding: 0 2rem;
-    }
-
     .main-text-container h1 {
         font-size: 2.5rem;
     }
@@ -929,8 +924,25 @@ ul {
         font-size: 0.9rem;
     }
 
+    .buttons-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .buttons-container a {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .info-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
     .carousel-container {
         max-width: 90%;
+        margin-top: 20rem;
         padding: 1rem;
     }
 
@@ -942,22 +954,32 @@ ul {
         text-align: center;
     }
 
-    .section-title {
-        text-align: center;
-    }
-
     .section-sub-title {
         font-size: 1.25rem;
-        text-align: center;
     }
 
     .section-description {
         font-size: 0.8rem;
     }
 
+    .feature-boxes {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
     .box {
         max-width: none;
         padding: 1rem;
+    }
+
+    .box-title {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .box-description {
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
     }
 
     .help-section {
@@ -970,7 +992,7 @@ ul {
     }
 
     .left-content {
-        text-align: left;
+        text-align: center;
     }
 
     .right-content {
@@ -981,12 +1003,332 @@ ul {
         padding: 1rem 1.5rem;
     }
 
-    .web-title span {
-        font-size: 1.2rem;
+    .top-footer {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .web-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .bottom-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
     }
 
     .bottom-footer a {
-        width: 1.5rem;
-        height: 1.5rem;
+        align-self: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .app-header.active {
+        margin-top: 0.5rem;
+    }
+
+    .app-header-wrapper.active {
+        margin: 0 0.5rem;
+    }
+
+    .app-navigation-bar.active {
+        width: 95%;
+        padding: 0 0.75rem;
+        border-radius: 1rem;
+    }
+
+    .logo-container.active .title-container .logo-description {
+        display: none;
+    }
+
+    .hero-contents {
+        margin-top: 6rem;
+    }
+
+    .main-text-container h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .description-container span {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .buttons-container {
+        gap: 0.75rem;
+    }
+
+    .buttons-container a {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.85rem;
+    }
+
+    .info-container span {
+        font-size: 0.75rem;
+        padding: 0.125rem 0.75rem;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+        margin-top: 15rem;
+        padding: 0.75rem;
+    }
+
+    .main-section {
+        padding: 3rem 1rem;
+    }
+
+    .feature-head {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 0.8rem;
+    }
+
+    .section-sub-title {
+        font-size: 1.1rem;
+    }
+
+    .section-description {
+        font-size: 0.75rem;
+    }
+
+    .feature-boxes {
+        gap: 0.75rem;
+    }
+
+    .box {
+        padding: 0.75rem;
+    }
+
+    .icon-box {
+        margin-bottom: 1rem;
+        padding: 0.375rem;
+    }
+
+    .box-title {
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .box-description {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .box-tags {
+        gap: 0.5rem;
+    }
+
+    .box-tags span {
+        font-size: 0.7rem;
+        padding: 0.125rem 0.25rem;
+    }
+
+    .help-section {
+        margin-top: 2rem;
+    }
+
+    .help-wrapper {
+        gap: 1rem;
+    }
+
+    .left-content .section-sub-title {
+        font-size: 1.2rem;
+    }
+
+    .section-description {
+        font-size: 0.7rem;
+    }
+
+    .help-list ul li {
+        font-size: 0.7rem;
+    }
+
+    .right-content {
+        padding: 0.75rem;
+        gap: 1rem;
+    }
+
+    .right-content .box-title {
+        font-size: 0.9rem;
+        margin-bottom: 0.375rem;
+    }
+
+    .right-content .box-description {
+        font-size: 0.85rem;
+        margin-bottom: 0.125rem;
+    }
+
+    .right-content .box-extra-info {
+        font-size: 11px;
+    }
+
+    .app-footer {
+        padding: 0.75rem 1rem;
+    }
+
+    .web-title {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .web-title span {
+        font-size: 1.25rem;
+    }
+
+    .web-links {
+        gap: 1rem;
+    }
+
+    .link-footer {
+        gap: 0.5rem;
+    }
+
+    .link-footer span {
+        font-size: 0.9rem;
+    }
+
+    .links-column {
+        gap: 0.125rem;
+        font-size: 0.8rem;
+    }
+
+    .bottom-footer span {
+        font-size: 0.8rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .app-header-wrapper {
+        margin: 0 0.5rem;
+    }
+
+    .app-navigation-bar {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .img-container {
+        width: 5rem;
+        height: 4rem;
+    }
+
+    .title-container .logo-title {
+        font-size: 0.8rem;
+    }
+
+    .sign-in-container a {
+        padding: 0.375rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .hero-contents {
+        margin-top: 5rem;
+    }
+
+    .main-text-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .description-container {
+        max-width: none;
+    }
+
+    .description-container span {
+        font-size: 0.75rem;
+    }
+
+    .buttons-container a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+
+    .info-container span {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.5rem;
+    }
+
+    .carousel-container {
+        margin-top: 12rem;
+        padding: 0.5rem;
+    }
+
+    .main-section {
+        padding: 2rem 0.75rem;
+    }
+
+    .feature-head {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-sub-title {
+        font-size: 1rem;
+    }
+
+    .section-description {
+        font-size: 0.7rem;
+    }
+
+    .feature-boxes {
+        gap: 0.5rem;
+    }
+
+    .box {
+        padding: 0.5rem;
+    }
+
+    .box-title {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .box-description {
+        font-size: 0.7rem;
+        margin-bottom: 0.375rem;
+    }
+
+    .box-tags span {
+        font-size: 0.65rem;
+        padding: 0.1rem 0.2rem;
+    }
+
+    .help-section {
+        margin-top: 1.5rem;
+    }
+
+    .left-content .section-sub-title {
+        font-size: 1.1rem;
+    }
+
+    .right-content {
+        padding: 0.5rem;
+        gap: 0.75rem;
+    }
+
+    .app-footer {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .web-title span {
+        font-size: 1.1rem;
+    }
+
+    .link-footer span {
+        font-size: 0.85rem;
+    }
+
+    .links-column a {
+        font-size: 0.75rem;
+    }
+
+    .bottom-footer span {
+        font-size: 0.75rem;
     }
 }
