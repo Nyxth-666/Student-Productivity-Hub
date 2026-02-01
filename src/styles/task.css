@@ -32,7 +32,7 @@
     font-weight: 400;
 }
 
-/* Rigth Content */
+/* Right Content */
 .right-task {
     display: flex;
     flex-direction: column;
@@ -164,11 +164,14 @@
 }
 
 .task-item {
+    position: relative;
     display: flex;
     gap: .9375rem;
     padding: .375rem .8125rem;
     justify-content: space-between;
+    border-radius: .25rem;
     border-bottom: .0625rem dashed var(--border-color);
+    overflow: hidden;
 }
 
 .task-left {
@@ -199,6 +202,7 @@
 .delete-btn:hover {
     background: #db7d75;
 }
+
 .action-buttons button:active {
     transform: scale(0.85);
 }
@@ -210,8 +214,8 @@
 }
 
 /* Task Input + Label Focus */
-.task-input:focus + label,
-.task-input:valid + label {
+.task-input:focus+label,
+.task-input:valid+label {
     font-size: .625rem;
     color: var(--special-bg-color);
     opacity: 0;
@@ -229,4 +233,25 @@
 .task-list::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.1);
     background: transparent;
+}
+
+/* Hover Effect */
+.task-item:hover .task-text {
+    opacity: 0.6;
+}
+
+.task-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    background-color: #e2bb73;
+    transition: 150ms ease-in-out;
+}
+
+.task-item:has(input:checked).task-item::before {
+    width: 100%;
+    height: 100%;
 }
