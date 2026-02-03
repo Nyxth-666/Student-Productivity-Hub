@@ -173,18 +173,6 @@
     border-bottom: .0625rem dashed var(--border-color);
     cursor: pointer;
     overflow: hidden;
-    background:
-        linear-gradient(#e2bb73 0 0),
-        linear-gradient(#7ad27a 0 0),
-        linear-gradient(#e05555 0 0);
-    ;
-    background-repeat: no-repeat;
-    background-size:
-        var(--focus, 0%), 100%,
-        var(--checked, 0%), 100%,
-        var(--delete, 0%), 100%;
-    background-position: left;
-    transition: background-size 200ms ease;
 }
 
 .task-left {
@@ -258,17 +246,43 @@
     z-index: 1;
 }
 
-.task-item.active {
-    --focus: 100%;
+.task-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--bg, transparent);
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:
+        transform 150ms ease-in-out,
+        opacity 150ms ease-in-out;
+    z-index: -1;
 }
 
-.task-item:has(input:checked) {
-    --focus: 0%;
-    --checked: 100%;
+.task-item.active {
+    --bg: #e2bb73;
+}
+
+.task-item.active::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.task-item.checked {
+    --bg: #6bcf9b;
+}
+
+.task-item.checked::before {
+    opacity: 1;
+    transform: scaleX(1);
 }
 
 .task-item.deleting {
-    --focus: 0%;
-    --checked: 0%;
-    --delete: 100%;
+    --bg: #e24a4a;
+}
+
+.task-item.deleting::before {
+    opacity: 1;
+    transform: scaleX(1);
 }
