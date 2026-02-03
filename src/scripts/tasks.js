@@ -42,12 +42,13 @@ addTaskButton.addEventListener("click", () => {
   createList.addEventListener("click", () => {
     document
       .querySelectorAll(".task-item")
-      .forEach((t) => t.classList.remove("selected"));
-    createList.classList.add("selected");
+      .forEach((t) => t.classList.remove("active"));
+    createList.classList.add("active");
     selectedTask = createList;
   });
 
   createCheckBox.addEventListener("change", () => {
+    createList.classList.toggle("checked", createCheckBox.checked);
     statsProgress();
   });
 
@@ -75,7 +76,11 @@ editTaskButton.addEventListener("click", () => {
 deleteTaskButton.addEventListener("click", () => {
   if (!selectedTask) return;
 
-  selectedTask.remove();
-  selectedTask = null;
-  statsProgress();
+  selectedTask.classList.add("deleting");
+
+  setTimeout(() => {
+    selectedTask.remove();
+    selectedTask = null;
+    statsProgress();
+  }, 200);
 });
