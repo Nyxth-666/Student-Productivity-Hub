@@ -171,6 +171,7 @@
     justify-content: space-between;
     border-radius: .25rem;
     border-bottom: .0625rem dashed var(--border-color);
+    cursor: pointer;
     overflow: hidden;
 }
 
@@ -243,15 +244,23 @@
 .task-item::before {
     content: "";
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
+    inset: 0;
     background-color: #e2bb73;
-    transition: 150ms ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 150ms ease-in-out;
+    opacity: 0.8;
+    border-radius: 8px;
+    z-index: 0;
 }
 
-.task-item:has(input:checked).task-item::before {
-    width: 100%;
-    height: 100%;
+.task-item:has(input:checked)::before {
+    transform: scaleX(1);
+    background-color: #85e273;
+    color: #fff;
+}
+
+.task-item>* {
+    position: relative;
+    z-index: 1;
 }
