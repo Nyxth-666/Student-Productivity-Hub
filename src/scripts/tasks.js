@@ -70,6 +70,8 @@ editTaskButton.addEventListener("click", () => {
   if (newText !== null && newText.trim()) {
     editSpan.textContent = newText.trim();
   }
+
+  selectedTask.classList.remove("active");
 });
 
 /* ----------- Delete Task Function ----------- */
